@@ -1,0 +1,4 @@
+Number		Dims		Class Data
+0		(64, 64, 3)		b'walking stick, walkingstick, stick insect' (class index: 181 - id: b'n02231487')
+1		(64, 64, 3)		b'cauliflower' (class index: 198 - id: b'n07715103')
+2		(64, 64, 3)		b'tractor' (class index: 75 - id: b'n04465501')
