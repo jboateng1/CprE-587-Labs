@@ -1,4 +1,4 @@
 Number		Dims		Class Data
-0		(64, 64, 3)		b'comic book' (class index: 173 - id: b'n06596364')
-1		(64, 64, 3)		b"academic gown, academic robe, judge's robe" (class index: 74 - id: b'n02669723')
-2		(64, 64, 3)		b'koala, koala bear, kangaroo bear, native bear, Phascolarctos cinereus' (class index: 68 - id: b'n01882714')
+0		(64, 64, 3)		b'ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle' (class index: 76 - id: b'n02165456')
+1		(64, 64, 3)		b'bow tie, bow-tie, bowtie' (class index: 156 - id: b'n02883205')
+2		(64, 64, 3)		b'projectile, missile' (class index: 49 - id: b'n04008634')
