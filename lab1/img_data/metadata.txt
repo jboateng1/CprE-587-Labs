@@ -1,4 +1,4 @@
 Number		Dims		Class Data
-0		(64, 64, 3)		b'ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle' (class index: 76 - id: b'n02165456')
-1		(64, 64, 3)		b'bow tie, bow-tie, bowtie' (class index: 156 - id: b'n02883205')
-2		(64, 64, 3)		b'projectile, missile' (class index: 49 - id: b'n04008634')
+0		(64, 64, 3)		b'organ, pipe organ' (class index: 19 - id: b'n03854065')
+1		(64, 64, 3)		b'abacus' (class index: 63 - id: b'n02666196')
+2		(64, 64, 3)		b'computer keyboard, keypad' (class index: 26 - id: b'n03085013')
