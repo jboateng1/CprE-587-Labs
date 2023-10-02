@@ -22,7 +22,8 @@ use IEEE.numeric_std.all;
 entity staged_mac is
   generic(
       -- Parameters of mac
-      C_DATA_WIDTH : integer := 8
+      C_DATA_WIDTH : integer := 8;
+      C_ACCUM_WIDTH : integer := 13
       
     );
 	port (
@@ -54,7 +55,7 @@ end staged_mac;
 architecture behavioral of staged_mac is
     -- Internal Signals
 	--signal state : std_logic_vector(1 downto 0) := "00";  -- State machine state//Josh
-    signal accumulate : signed(C_DATA_WIDTH-1 downto 0) := (others => '0');  -- Accumulator//Josh
+    signal accumulate : signed(C_ACCUM_WIDTH-1 downto 0) := (others => '0');  -- Accumulator//Josh what should be the size of the accumulate? 16-bits? 13-bits?
     signal mac_debug : std_logic_vector(31 downto 0) := (others => '0');    -- Debug signal//Josh
 	
 	-- Mac state
@@ -122,7 +123,7 @@ begin
    end process;
    
    -- Output the accumulated result when valid
-  MO_AXIS_TDATA <= std_logic_vector(accumulate(C_DATA_WIDTH-1 downto 0));
+  MO_AXIS_TDATA <= std_logic_vector(accumulate(C_DATA_WIDTH-1 downto 0)); --doublecheck this part. Bitwidth to be assigned to MO_AXIS_TDATA? Explain
   MO_AXIS_TLAST <= SD_AXIS_TLAST;
   MO_AXIS_TVALID <= '1' when SD_AXIS_TVALID = '1' and state = MULTIPLY_ACCUMULATE else '0';
   

@@ -392,3 +392,40 @@ typeControlKey((HResource) null, "staged_mac.vhd", 'v'); // bP (w, cs)
 // Elapsed time: 62 seconds
 selectCodeEditor("staged_mac.vhd", 670, 511); // bP (w, cs)
 selectCodeEditor("staged_mac.vhd", 670, 511); // bP (w, cs)
+// Elapsed time: 400 seconds
+selectCodeEditor("staged_mac.vhd", 718, 88); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 283 seconds
+selectCodeEditor("staged_mac.vhd", 261, 129); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("staged_mac.vhd", 374, 243); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,528 MB. GUI used memory: 68 MB. Current time: 10/2/23, 2:33:24 AM CDT
+selectCodeEditor("staged_mac.vhd", 201, 144); // bP (w, cs)
+typeControlKey((HResource) null, "staged_mac.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 207, 141); // bP (w, cs)
+typeControlKey((HResource) null, "staged_mac.vhd", 'v'); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("staged_mac.vhd", 331, 174); // bP (w, cs)
+// Elapsed time: 41 seconds
+selectCodeEditor("staged_mac.vhd", 239, 139); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("staged_mac.vhd", 137, 157); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 109, 161); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,552 MB. GUI used memory: 68 MB. Current time: 10/2/23, 2:34:49 AM CDT
+selectCodeEditor("staged_mac.vhd", 135, 156); // bP (w, cs)
+typeControlKey((HResource) null, "staged_mac.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("staged_mac.vhd", 351, 160); // bP (w, cs)
+// Elapsed time: 25 seconds
+selectCodeEditor("staged_mac.vhd", 318, 367); // bP (w, cs)
+typeControlKey((HResource) null, "staged_mac.vhd", 'v'); // bP (w, cs)
+// Elapsed time: 53 seconds
+selectCodeEditor("staged_mac.vhd", 428, 577); // bP (w, cs)
+// Elapsed time: 24 seconds
+selectCodeEditor("staged_mac.vhd", 574, 578); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
