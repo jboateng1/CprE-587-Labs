@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Sep 27 01:05:44 2023
+# Process ID: 62644
+# Current directory: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main
+# Command line: vivado
+# Log file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/vivado.log
+# Journal file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/vivado.jou
+#-----------------------------------------------------------
+start_gui
+cd /home/jboateng/cpre_587_lab3/hw/mac/vivado
+cd /home/jboateng/cpre_587_lab3/hw/staged_mac/vivado
+cd /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado
+pwd
+ls
+exec
+exec ls
+source tc_staged_mac_ip.tcl
+update_compile_order -fileset sources_1
