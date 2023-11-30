@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Nov 20 01:37:18 2023
+# Process ID: 56997
+# Current directory: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/piped_mac/tb/tcl
+# Command line: vivado
+# Log file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/piped_mac/tb/tcl/vivado.log
+# Journal file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/piped_mac/tb/tcl/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source piped_mac.tcl
+pwd
+ls
+source piped_mac2_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac2_tb.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac2_tb.tcl
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac2_tb.tcl
+source piped_mac1_tb.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac2_tb.tcl
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac2_tb.tcl
+source piped_mac1_tb.tcl

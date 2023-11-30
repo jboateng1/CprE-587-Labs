@@ -2,98 +2,291 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Oct  1 15:54:01 2023
-# Process ID: 18609
+# Start of session at: Tue Nov 28 15:54:43 2023
+# Process ID: 18964
 # Current directory: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main
 # Command line: vivado
 # Log file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/vivado.log
 # Journal file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/vivado.jou
 #-----------------------------------------------------------
 start_gui
-cd /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/
-source tc_mac.tcl
-couldn't read file "tc_mac.tcl": no such file or directory
-source tc_staged_mac.tcl
-couldn't read file "tc_staged_mac.tcl": no such file or directory
-ls
-WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
-tc_staged_mac
-tc_staged_mac_ip.tcl
-Xilinx
-exec ls
-tc_staged_mac
-tc_staged_mac_ip.tcl
-Xilinx
-source tc_staged_mac_ip.tcl
-# set origin_dir "."
-# if { [info exists ::origin_dir_loc] } {
-#   set origin_dir $::origin_dir_loc
-# }
-# set _xil_proj_name_ "tc_staged_mac"
-# if { [info exists ::user_project_name] } {
-#   set _xil_proj_name_ $::user_project_name
-# }
-# variable script_file
-# set script_file "tc_staged_mac_ip.tcl"
-# proc print_help {} {
-#   variable script_file
-#   puts "\nDescription:"
-#   puts "Recreate a Vivado project from this script. The created project will be"
-#   puts "functionally equivalent to the original project for which this script was"
-#   puts "generated. The script contains commands for creating a project, filesets,"
-#   puts "runs, adding/importing sources and setting properties on various objects.\n"
-#   puts "Syntax:"
-#   puts "$script_file"
-#   puts "$script_file -tclargs \[--origin_dir <path>\]"
-#   puts "$script_file -tclargs \[--project_name <name>\]"
-#   puts "$script_file -tclargs \[--help\]\n"
-#   puts "Usage:"
-#   puts "Name                   Description"
-#   puts "-------------------------------------------------------------------------"
-#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
-#   puts "                       origin_dir path value is \".\", otherwise, the value"
-#   puts "                       that was set with the \"-paths_relative_to\" switch"
-#   puts "                       when this script was generated.\n"
-#   puts "\[--project_name <name>\] Create project with the specified name. Default"
-#   puts "                       name is the name of the project from where this"
-#   puts "                       script was generated.\n"
-#   puts "\[--help\]               Print help information for this script"
-#   puts "-------------------------------------------------------------------------\n"
-#   exit 0
-# }
-# if { $::argc > 0 } {
-#   for {set i 0} {$i < $::argc} {incr i} {
-#     set option [string trim [lindex $::argv $i]]
-#     switch -regexp -- $option {
-#       "--origin_dir"   { incr i; set origin_dir [lindex $::argv $i] }
-#       "--project_name" { incr i; set _xil_proj_name_ [lindex $::argv $i] }
-#       "--help"         { print_help }
-#       default {
-#         if { [regexp {^-} $option] } {
-#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
-#           return 1
-#         }
-#       }
-#     }
-#   }
-# }
-# set orig_proj_dir "[file normalize "$origin_dir/tc_staged_mac"]"
-# create_project ${_xil_proj_name_} ./${_xil_proj_name_} -part xc7z020clg484-1
-ERROR: [Common 17-53] User Exception: Project already exists on disk, please use '-force' option to overwrite: 
-     /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr
-     /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim
-     /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.cache
-     /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.hw
-     /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.ip_user_files
-     /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.hbs
 open_project /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr
 Scanning sources...
 Finished scanning sources
-WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.srcs/sources_1'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'.
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 7229.391 ; gain = 37.250 ; free physical = 7864 ; free virtual = 19203
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 7337.988 ; gain = 34.246 ; free physical = 10451 ; free virtual = 21203
 update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj staged_mac_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "staged_mac_behav -key {Behavioral:sim_1:Functional:staged_mac} -tclbatch {staged_mac.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source staged_mac.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'staged_mac_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 7465.957 ; gain = 97.820 ; free physical = 10453 ; free virtual = 21205
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+env.sh
+hw
+README.md
+sw
+vivado_16719.backup.jou
+vivado_16719.backup.log
+vivado_17290.backup.jou
+vivado_17290.backup.log
+vivado_17464.backup.jou
+vivado_17464.backup.log
+vivado_37907.backup.jou
+vivado_37907.backup.log
+vivado_38703.backup.jou
+vivado_38703.backup.log
+vivado.jou
+vivado.log
+vivado_pid16719.str
+vivado_pid17464.str
+vivado_pid18964.str
+vivado_pid26907.str
+vivado_pid37907.str
+vivado_pid38703.str
+cd hw
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+mlp_conv
+mlp_system
+piped_mac
+staged_mac
+cd staged_mac
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+component.xml
+hdl
+tb
+vivado
+xgui
+cd tb
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+do
+tcl
+cd tcl
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+staged1_mac_tb.tcl
+staged_mac_tb.tcl
+staged_multi_op.tcl
+staged_new_mac_tb.tcl
+staged_single_op.tcl
+source staged_single_op.tcl
+# relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj staged_mac_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7465.957 ; gain = 0.000 ; free physical = 10462 ; free virtual = 21214
+# add_force {/staged_mac/ACLK} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+# add_force {/staged_mac/ARESETN} -radix hex {0 0ns}
+# run 30ns
+# add_force {/staged_mac/ARESETN} -radix hex {1 0ns}
+# add_force {/staged_mac/MO_AXIS_TREADY} -radix hex {1 0ns}
+# add_force {/staged_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
+# add_force {/staged_mac/SD_AXIS_TLAST} -radix hex {1 0ns}
+# add_force {/staged_mac/SD_AXIS_TID} -radix hex {1 0ns}
+# add_force {/staged_mac/SD_AXIS_TDATA} -radix hex {1111111122222222 0ns}
+# add_force {/staged_mac/SD_AXIS_TUSER} -radix hex {0 0ns}
+# run 10ns
+# add_force {/staged_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
+# run 50ns
+export_ip_user_files -of_objects  [get_files /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.srcs/sources_1/new/staged_mac_new.vhd] -no_script -reset -force -quiet
+remove_files  /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.srcs/sources_1/new/staged_mac_new.vhd
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj staged_mac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/staged_mac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'staged_mac'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 16 elements ; expected 8 [/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/staged_mac.vhd:137]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit staged_mac in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj staged_mac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/hdl/staged_mac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'staged_mac'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.staged_mac
+Built simulation snapshot staged_mac_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "staged_mac_behav -key {Behavioral:sim_1:Functional:staged_mac} -tclbatch {staged_mac.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source staged_mac.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'staged_mac_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7519.848 ; gain = 45.023 ; free physical = 9148 ; free virtual = 20436
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+staged1_mac_tb.tcl
+staged_mac_tb.tcl
+staged_multi_op.tcl
+staged_new_mac_tb.tcl
+staged_single_op.tcl
+source staged_single_op.tcl
+# relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj staged_mac_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 7519.848 ; gain = 0.000 ; free physical = 9160 ; free virtual = 20448
+# add_force {/staged_mac/ACLK} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+# add_force {/staged_mac/ARESETN} -radix hex {0 0ns}
+# run 30ns
+# add_force {/staged_mac/ARESETN} -radix hex {1 0ns}
+# add_force {/staged_mac/MO_AXIS_TREADY} -radix hex {1 0ns}
+# add_force {/staged_mac/SD_AXIS_TVALID} -radix hex {1 0ns}
+# add_force {/staged_mac/SD_AXIS_TLAST} -radix hex {1 0ns}
+# add_force {/staged_mac/SD_AXIS_TID} -radix hex {1 0ns}
+# add_force {/staged_mac/SD_AXIS_TDATA} -radix hex {1111111122222222 0ns}
+# add_force {/staged_mac/SD_AXIS_TUSER} -radix hex {0 0ns}
+# run 10ns
+# add_force {/staged_mac/SD_AXIS_TVALID} -radix hex {0 0ns}
+# run 50ns

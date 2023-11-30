@@ -1,0 +1,87 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Nov 28 15:43:06 2023
+# Process ID: 17290
+# Current directory: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main
+# Command line: vivado
+# Log file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/vivado.log
+# Journal file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/remote/Xilinx/2020.1/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 7213.023 ; gain = 34.246 ; free physical = 10706 ; free virtual = 21306
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'staged_mac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj staged_mac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.srcs/sources_1/new/staged_mac_new.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'staged_mac'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /remote/Xilinx/2020.1/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto d3ca7db206124c02948703f811dd1295 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot staged_mac_behav xil_defaultlib.staged_mac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.staged_mac
+Built simulation snapshot staged_mac_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim/xsim.dir/staged_mac_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 28 15:53:05 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "staged_mac_behav -key {Behavioral:sim_1:Functional:staged_mac} -tclbatch {staged_mac.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source staged_mac.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'staged_mac_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 7369.008 ; gain = 94.820 ; free physical = 10466 ; free virtual = 21219
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 28 15:53:33 2023...

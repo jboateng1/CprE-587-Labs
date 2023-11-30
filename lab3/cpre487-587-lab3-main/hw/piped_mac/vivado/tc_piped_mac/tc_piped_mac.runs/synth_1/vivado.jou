@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Nov 22 15:25:33 2023
+# Process ID: 18454
+# Current directory: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/synth_1
+# Command line: vivado -log piped_mac.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source piped_mac.tcl
+# Log file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/synth_1/piped_mac.vds
+# Journal file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source piped_mac.tcl -notrace

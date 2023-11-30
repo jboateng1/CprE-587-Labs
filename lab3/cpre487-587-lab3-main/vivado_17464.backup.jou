@@ -1,0 +1,122 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Nov 21 14:58:37 2023
+# Process ID: 17464
+# Current directory: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main
+# Command line: vivado
+# Log file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/vivado.log
+# Journal file: /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr
+update_compile_order -fileset sources_1
+open_run impl_1
+close_project
+open_project /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/piped_mac/vivado/tc_piped_mac/tc_piped_mac.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source piped_mac.tcl
+ls
+cd hw
+ls
+cd piped_mac
+ls
+cd tb
+ls
+cd tcl
+ls
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+ls
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac1_tb.tcl
+close_sim
+launch_simulation
+source piped_mac.tcl
+source piped_mac1_tb.tcl
+close_sim
+close_project
+open_project /home/jboateng/cpre_587_lab3/cpre_587_lab1/lab3/cpre487-587-lab3-main/hw/staged_mac/vivado/tc_staged_mac/tc_staged_mac.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source staged_mac.tcl
+ls
+source staged_single_op.tcl
+ls
+pwd
+cd ../..
+ls
+pwd
+cd ..
+pwd
+ls
+cd staged_mac
+ls
+cd tb
+ls
+cd tcl
+ls
+source staged_single_op.tcl
+source staged_multi_op.tcl
+source staged_multi_op.tcl
+source staged_multi_op.tcl
+close_sim
+launch_simulation
+source staged_mac.tcl
+ls
+source staged_multi_op.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+close_sim
+launch_simulation
+source staged_mac.tcl
+source staged_multi_op.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source staged_mac.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source staged_mac.tcl
+source staged_multi_op.tcl
+close_sim
+launch_simulation
+launch_simulation
+source staged_mac.tcl
+source staged_single_op.tcl
+close_sim
+launch_simulation
+source staged_mac.tcl
+source staged_single_op.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run impl_1

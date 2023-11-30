@@ -1,4 +1,4 @@
-force sim:/staged_mac/ACLK 1 0, 0 {5 ps} -r 10
+force ACLK 1 0, 0 {5 ps} -r 10
 run 20
 force sim:/staged_mac/ARESETN 1 0 -cancel 20
 force sim:/staged_mac/ARESETN 0 20

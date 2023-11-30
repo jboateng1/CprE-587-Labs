@@ -22,8 +22,8 @@ use IEEE.numeric_std.all;
 entity staged_mac is
   generic(
       -- Parameters of mac
-      C_DATA_WIDTH : integer := 8;
-      C_ACCUM_WIDTH : integer := 13
+      C_DATA_WIDTH : integer := 32;
+      C_ACCUM_WIDTH : integer := 16
       
     );
 	port (
@@ -32,7 +32,7 @@ entity staged_mac is
 
         -- AXIS slave data interface
 		SD_AXIS_TREADY	: out	std_logic;
-		SD_AXIS_TDATA	: in	std_logic_vector(C_DATA_WIDTH*2-1 downto 0);  -- Packed data input
+		SD_AXIS_TDATA	: in	std_logic_vector(C_DATA_WIDTH*4-1 downto 0);  -- Packed data input
 		SD_AXIS_TLAST	: in	std_logic;
         SD_AXIS_TUSER   : in    std_logic;  -- Should we treat this first value in the stream as an inital accumulate value?
 		SD_AXIS_TVALID	: in	std_logic;
@@ -40,7 +40,8 @@ entity staged_mac is
 
         -- AXIS master accumulate result out interface
 		MO_AXIS_TVALID	: out	std_logic;
-		MO_AXIS_TDATA	: out	std_logic_vector(C_DATA_WIDTH-1 downto 0);
+		MO_AXIS_TDATA	: out	std_logic_vector(7 downto 0);
+		--MO_AXIS_TDATA	: out	std_logic_vector(C_DATA_WIDTH-1 downto 0);
 		MO_AXIS_TLAST	: out	std_logic;
 		MO_AXIS_TREADY	: in	std_logic;
 		MO_AXIS_TID     : out   std_logic_vector(7 downto 0)
@@ -54,21 +55,22 @@ end staged_mac;
 
 architecture behavioral of staged_mac is
     -- Internal Signals
-	--signal state : std_logic_vector(1 downto 0) := "00";  -- State machine state//Josh
-    signal accumulate : signed(C_ACCUM_WIDTH-1 downto 0) := (others => '0');  -- Accumulator//Josh what should be the size of the accumulate? 16-bits? 13-bits?
-    signal mac_debug : std_logic_vector(31 downto 0) := (others => '0');    -- Debug signal//Josh
-	
+	--signal state : std_logic_vector(1 downto 0) := "00";  -- State machine state
+    signal accumulate : signed(C_ACCUM_WIDTH downto 0) := (others => '0');  
+    --signal accumulate : signed(C_ACCUM_WIDTH-1 downto 0) := (others => '0');  --change this part to support generic widths
+    signal mac_debug : std_logic_vector(31 downto 0) := (others => '0');    -- Debug signal
+	signal mult  : std_logic_vector(15 downto 0) := (others => '0');
 	-- Mac state
-    type STATE_TYPE is (WAIT_FOR_VALUES, MULTIPLY_ACCUMULATE);
+    type STATE_TYPE is (WAIT_FOR_VALUES, MULTIPLY, ACCUM);
     signal state : STATE_TYPE := WAIT_FOR_VALUES;
 	
 	-- Debug signals, make sure we aren't going crazy
-    -- signal mac_debug : std_logic_vector(31 downto 0);//commented out
+    -- signal mac_debug : std_logic_vector(31 downto 0);
 
 begin
 
     -- Interface signals
-    SD_AXIS_TREADY <= '1';  -- Always ready to accept data//Josh
+    SD_AXIS_TREADY <= '1';  -- Always ready to accept data
 
 
     -- Internal signals
@@ -78,9 +80,12 @@ begin
     mac_debug <= x"00000000";  -- Double checking sanity
    
    process (ACLK) is
-    variable data_input : signed(C_DATA_WIDTH-1 downto 0); --//Josh
-    variable weight_input : signed(C_DATA_WIDTH-1 downto 0); --//Josh
-    variable result : signed(C_DATA_WIDTH*2-1 downto 0); --//Josh
+    variable data_input : signed(7 downto 0); 
+    variable weight_input : signed(15 downto 8); 
+    variable result : signed(15 downto 0); 
+    --variable data_input : signed(C_DATA_WIDTH-1 downto 0); 
+    --variable weight_input : signed(C_DATA_WIDTH-1 downto 0); 
+    --variable result : signed(C_DATA_WIDTH*2-1 downto 0); 
     
    begin 
     if rising_edge(ACLK) then  -- Rising Edge
@@ -88,7 +93,7 @@ begin
       -- Reset values if reset is low
       if ARESETN = '0' then  -- Reset
         state       <= WAIT_FOR_VALUES;
-        accumulate <= (others => '0');  -- Reset the accumulator. Please double-check this
+        accumulate <= (others => '0');  -- Reset the accumulator. 
 
       else
         case state is  -- State
@@ -96,20 +101,26 @@ begin
             when WAIT_FOR_VALUES =>
                 -- Wait here until we recieve valid values
               if SD_AXIS_TVALID = '1' then
-                data_input := signed(SD_AXIS_TDATA(C_DATA_WIDTH-1 downto 0));
-                weight_input := signed(SD_AXIS_TDATA(C_DATA_WIDTH*2-1 downto C_DATA_WIDTH));
-                result := data_input * weight_input;
-                state <= MULTIPLY_ACCUMULATE;
+                data_input := signed(SD_AXIS_TDATA(7 downto 0)); 
+                weight_input := signed(SD_AXIS_TDATA(15 downto 8)); 
+                --result := data_input * weight_input;
+                state <= MULTIPLY;
               end if;
 			
-			when MULTIPLY_ACCUMULATE =>
-			  if SD_AXIS_TVALID = '1' then
-                data_input := signed(SD_AXIS_TDATA(C_DATA_WIDTH-1 downto 0));
-                weight_input := signed(SD_AXIS_TDATA(C_DATA_WIDTH*2-1 downto C_DATA_WIDTH));
+			when MULTIPLY =>
+			  if SD_AXIS_TLAST = '1' then
+             
                 result := data_input * weight_input;
+                
+                state <= ACCUM;
+              end if;
+			
+			when ACCUM =>
+			  if SD_AXIS_TLAST = '1' then
+                
                 accumulate <= accumulate + result;  -- Accumulate the result
+                state <= WAIT_FOR_VALUES;
               end if;
-			
 			-- Other stages go here	
 			
             when others =>
@@ -123,8 +134,9 @@ begin
    end process;
    
    -- Output the accumulated result when valid
-  MO_AXIS_TDATA <= std_logic_vector(accumulate(C_DATA_WIDTH-1 downto 0)); --doublecheck this part. Bitwidth to be assigned to MO_AXIS_TDATA? Explain
+  MO_AXIS_TDATA <= std_logic_vector(accumulate(7 downto 0)); 
+  --MO_AXIS_TDATA <= std_logic_vector(accumulate(C_DATA_WIDTH-1 downto 0));
   MO_AXIS_TLAST <= SD_AXIS_TLAST;
-  MO_AXIS_TVALID <= '1' when SD_AXIS_TVALID = '1' and state = MULTIPLY_ACCUMULATE else '0';
+  MO_AXIS_TVALID <= '1' when SD_AXIS_TVALID = '1' and state = ACCUM else '0';
   
 end architecture behavioral;
